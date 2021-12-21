@@ -33,8 +33,9 @@ resource "aws_launch_template" "my_launch_template" {
   key_name               = var.key_pair
 
   tags = {
-    Name        = "Bastion-Host"
-    Environment = "Sandbox"
+    Name              = "Bastion-Host"
+    Environment       = "Sandbox"
+    Is_usable_in_prod = "False"
   }
 }
 
