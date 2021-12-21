@@ -1,10 +1,10 @@
 output "default_vpc" {
-  value = data.aws_vpc.default_vpc.id
+  value       = data.aws_vpc.default_vpc.id
   description = "Default VPC id is : "
 }
 
 output "default_subnets" {
-  value = data.aws_subnet_ids.default_subnets.ids
+  value       = data.aws_subnet_ids.default_subnets.ids
   description = "Default Subnet IDs : "
 }
 
