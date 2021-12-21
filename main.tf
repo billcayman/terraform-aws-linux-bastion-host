@@ -31,6 +31,10 @@ resource "aws_launch_template" "my_launch_template" {
   instance_type = var.instance_type
   vpc_security_group_ids = [ aws_security_group.instance_sg.id ]
   key_name = var.key_pair
+
+  tags = {
+    Name = "Bastion-Host"
+  }
 }
 
 resource "aws_autoscaling_group" "bar" {
